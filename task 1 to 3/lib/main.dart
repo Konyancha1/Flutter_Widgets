@@ -1,5 +1,7 @@
+// Imports
 import 'package:flutter/material.dart';
 
+// Main function
 void main() {
   runApp(const MyApp());
 }
@@ -7,7 +9,7 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
+  // This widget is the root of the application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -26,18 +28,23 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Scaffold
     return Scaffold(
       appBar: AppBar(
         title: const Text('Available Games'),
         centerTitle: true,
         backgroundColor: Colors.red,
       ),
+      // Centers elements in the body
       body: Center(
+        // Elements in the body are put in a column
         child: Column(
           children: [
             ConstrainedBox(
+              // Box properties which constraints its child
               constraints: const BoxConstraints(
                   maxHeight: 150, maxWidth: 300, minHeight: 100, minWidth: 100),
+              // Container properties
               child: Container(
                 color: Colors.red,
                 margin: const EdgeInsets.all(10),
@@ -47,8 +54,10 @@ class HomePage extends StatelessWidget {
               ),
             ),
             ConstrainedBox(
+              // Box properties which constraints its child
               constraints: const BoxConstraints(
                   maxHeight: 150, maxWidth: 300, minHeight: 100, minWidth: 100),
+              // Container properties
               child: Container(
                 color: Colors.red,
                 margin: const EdgeInsets.all(10),
@@ -58,9 +67,11 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
+            // Sized box properties which constraints its child
             SizedBox(
               height: 150,
               width: 300,
+              // Container properties
               child: Container(
                 height: 150,
                 width: 300,
@@ -71,6 +82,7 @@ class HomePage extends StatelessWidget {
                         style: TextStyle(color: Colors.white))),
               ),
             ),
+            // Container properties
             Container(
                 height: 130,
                 width: 280,
